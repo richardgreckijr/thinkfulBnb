@@ -64,14 +64,23 @@ header {
   color: #fff;
 }
 
+header nav ul{
+  display: flex;
+  justify-content: center;
+}
+
 header nav ul li {
   list-style-type: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
 
 header nav ul li a {
   color: #fff;
   text-decoration: none;
   padding: 0 20px 0 0;
+
 }
 
 header nav ul li a:hover {
@@ -81,18 +90,29 @@ header nav ul li a:hover {
 
 /* -------  Search Form ------- */
 form {
+  display: flex;
+  flex-direction: column;
   border: 2px solid #ff385c;
   padding: 10px;
+  
 }
 
 form label {
   font-weight: bold;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 30%;
 }
+
+
 
 form select,
 form input {
+  display: flex;
+  justify-content: flex-end;
   margin-bottom: 20px;
-  width: 180px;
+  width: 70%;
 }
 
 form button {
