@@ -1,6 +1,8 @@
 /* -------  General Styles ------- */
-
+html,
 body {
+  width: 100%;
+  overflow-x: hidden;
   font-family: "Lato", sans-serif;
 }
 
@@ -31,7 +33,7 @@ section.alternate-background {
 }
 
 main img {
-  width: 100px;
+  width: 100%;
 }
 
 /* ---  Groups & Items --- */
@@ -39,6 +41,10 @@ main img {
 .group {
   display: flex;
   flex-direction: column;
+}
+
+.group img{
+  width: 100%;
 }
 
 .item {
@@ -49,6 +55,7 @@ main img {
 .item-double {
   flex: 2;
 }
+
 
 /* -------  Navigation ------- */
 
@@ -67,13 +74,13 @@ header {
 header nav ul{
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+  padding-left: 0;
+  padding-bottom: 20px;
 }
 
 header nav ul li {
   list-style-type: none;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
 }
 
 header nav ul li a {
@@ -89,39 +96,34 @@ header nav ul li a:hover {
 }
 
 /* -------  Search Form ------- */
-form {
-  display: flex;
-  flex-direction: column;
+
+form{
   border: 2px solid #ff385c;
   padding: 10px;
-  
+  max-width: 100%;
 }
 
-form label {
-  font-weight: bold;
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  width: 30%;
-}
-
-
-
-form select,
-form input {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 20px;
-  width: 70%;
-}
-
-form button {
+form button{
   background-color: #ff385c;
-  border: none;
-  color: #fff;
   font-size: 24px;
   padding: 15px;
   width: 100%;
+  border: none;
+}
+
+form div{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 7px;
+}
+
+form label{
+  font-weight: bold;
+}
+
+form select, form input{
+  margin-bottom: 20px;
+  width: 180px;
 }
 
 /* -------  Footer ------- */
@@ -137,3 +139,75 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media screen and (min-width: 480px){
+
+  /* --Header-- */
+
+  header {
+    background-color: #ff385c;
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+  header nav {
+    padding: 10px;
+  }
+
+  .logo{
+    height: .5rem;
+    font-size: 2rem;
+    text-align: left;
+    align-self:flex-start;
+  }
+
+/* --Form--- */
+
+form {
+    flex-direction: row;
+}
+
+.rental-form .item{
+  display: flex block;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.item label, .item input, .item select, .item button{
+  display: flex;
+  width: 100%;
+}
+
+.item button{
+  justify-content: center;
+}
+
+
+
+
+/* groups & items */
+
+.group{
+  flex-direction: row;
+}
+
+
+.group p{
+  display: flex;
+  width: 50%;
+  align-items: center;
+}
+
+.item img{
+  display: flex;
+ width: 90%;
+ justify-content: right;
+}
+.hostgroup p, img{
+text-align: left;
+display: flex;
+align-items: flex-end;
+}
+
+}
