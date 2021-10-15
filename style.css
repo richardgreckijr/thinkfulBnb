@@ -2,7 +2,6 @@
 html,
 body {
   width: 100%;
-  overflow-x: hidden;
   font-family: "Lato", sans-serif;
 }
 
@@ -43,7 +42,7 @@ main img {
   flex-direction: column;
 }
 
-.group img{
+.group img {
   width: 100%;
 }
 
@@ -55,7 +54,6 @@ main img {
 .item-double {
   flex: 2;
 }
-
 
 /* -------  Navigation ------- */
 
@@ -71,7 +69,7 @@ header {
   color: #fff;
 }
 
-header nav ul{
+header nav ul {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -87,41 +85,37 @@ header nav ul li a {
   color: #fff;
   text-decoration: none;
   padding: 0 20px 0 0;
-
-}
-
-header nav ul li a:hover {
-  color: #bdbdbd;
-  text-decoration: none;
 }
 
 /* -------  Search Form ------- */
 
-form{
+form {
   border: 2px solid #ff385c;
   padding: 10px;
   max-width: 100%;
 }
 
-form button{
+form button {
   background-color: #ff385c;
+  color: #fff;
   font-size: 24px;
   padding: 15px;
   width: 100%;
   border: none;
 }
 
-form div{
+#vacaForm {
   display: flex;
   justify-content: space-between;
   padding: 0 7px;
 }
 
-form label{
+form label {
   font-weight: bold;
 }
 
-form select, form input{
+form select,
+form input {
   margin-bottom: 20px;
   width: 180px;
 }
@@ -138,76 +132,60 @@ footer p {
   padding: 20px;
 }
 
-/* -------  Media Query ------- */
+/* -------  Media Query for Desktop ------- */
 
-@media screen and (min-width: 480px){
+@media screen and (min-width: 480px) {
 
-  /* --Header-- */
-
+  /* ------ NavBar ------ */
   header {
-    background-color: #ff385c;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+  }
+  header nav ul {
+    padding-top: 14px;
   }
 
-
-  header nav {
-    padding: 10px;
+  .logo {
+    font-size: 3rem;
   }
 
-  .logo{
-    height: .5rem;
-    font-size: 2rem;
-    text-align: left;
-    align-self:flex-start;
+  header nav ul li a:hover {
+    color: #bdbdbd;
+    text-decoration: none;
   }
 
-/* --Form--- */
-
-form {
+  /* ------- Form ------ */
+  form {
+    display: flex;
     flex-direction: row;
-}
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+  }
 
-.rental-form .item{
-  display: flex block;
-  flex-direction: column;
-  flex: 1 1 auto;
-}
+  #vacaForm {
+    display: flex;
+    flex-direction: column;
+  }
 
-.item label, .item input, .item select, .item button{
-  display: flex;
-  width: 100%;
-}
+  #vacaForm button {
+    transform: translateY(25%);
+    width: 11rem;
+  }
 
-.item button{
-  justify-content: center;
-}
+  /* ----- Grouping ----- */
+  .group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 
+  .ideas-top {
+    display: flex;
+  }
 
-
-
-/* groups & items */
-
-.group{
-  flex-direction: row;
-}
-
-
-.group p{
-  display: flex;
-  width: 50%;
-  align-items: center;
-}
-
-.item img{
-  display: flex;
- width: 90%;
- justify-content: right;
-}
-.hostgroup p, img{
-text-align: left;
-display: flex;
-align-items: flex-end;
-}
-
+  .ideas-bot {
+    display: flex;
+  }
 }
